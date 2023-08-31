@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px; 
+  width: 100%;
+  background-color: #D69620;
+  background-image: url("../images/asfalt-light.png");
+}
+
+.avatar {
+  width: 100%;
+}
+
+.name {
+  width: 100%;
+}

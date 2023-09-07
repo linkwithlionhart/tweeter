@@ -6,18 +6,32 @@ textarea {
   border-right-color: transparent;
   border-bottom-color: #555149;
   border-bottom-width: thick;
-  font-weight: bold;;
+  font-weight: bold;
   color: #555149;
 }
 
 button {
   color: white;
   background-color: #4056A1;
-  font-family: 'Bungee';
+  font-family: 'Bungee', cursive;
+  border-radius: 3px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  color: #F13E20;
+}
+
+button:active {
+  transform: translateY(3px);
 }
 
 .tweet-footer {
   display: flex;
   justify-content: space-between;
-  
+  font-family: 'Bungee', cursive;
+}
+
+.turn-red-counter {
+  color: red;
 }

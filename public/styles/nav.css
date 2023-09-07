@@ -22,7 +22,7 @@ nav {
   font-size: xx-large;
 }
 
-div {
+nav div {
   display: flex;
   flex-direction: column;
   align-items: center;

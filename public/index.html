@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./styles/layout.css" type="text/css"/>
     <link rel="stylesheet" href="./styles/nav.css" type="text/css"/>
     <link rel="stylesheet" href="./styles/header.css" type="text/css"/>
+    <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css">
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- App JS -->
@@ -35,14 +36,22 @@
       </div>
       <br>
       <div class="name">
-        <h2><strong>William</strong> Lionhart</h2>
+        <h2><strong>William</strong></h2>
       </div>
     </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-      <h1>Sample Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat, elit in fringilla cursus, lacus massa hendrerit libero, eget lacinia orci nibh ac erat. Sed a efficitur elit, id rutrum elit. Donec id sapien vel nulla convallis suscipit. Quisque bibendum fringilla cursus.</p>
-      <h2>Sub Heading</h2>
-      <p>More content here...</p>
+    <!-- Main container to Tweet -->
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets/">
+          <textarea name="text" id="tweet-text">What are you humming about?</textarea>
+          <!-- Footer -->
+          <div class="tweet-footer">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 </html>

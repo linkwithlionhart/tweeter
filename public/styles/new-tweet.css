@@ -1,4 +1,4 @@
-textarea {
+.new-tweet textarea {
   width: 100%;
   background-color: transparent;
   border-top-color: transparent;
@@ -10,7 +10,7 @@ textarea {
   color: #555149;
 }
 
-button {
+.new-tweet button {
   color: white;
   background-color: #4056A1;
   font-family: 'Bungee', cursive;
@@ -18,20 +18,21 @@ button {
   transition-duration: 0.4s;
 }
 
-button:hover {
+.new-tweet button:hover {
   color: #F13E20;
 }
 
-button:active {
+.new-tweet button:active {
   transform: translateY(3px);
 }
 
-.tweet-footer {
+.new-tweet .footer {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
 }
 
+/* Linked to composer-char-counter in scripts */
 .turn-red-counter {
   color: red;
 }

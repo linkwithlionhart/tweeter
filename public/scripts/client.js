@@ -63,6 +63,19 @@ $(document).ready(() => {
   $(".new-tweet form").submit(function(event) {
     event.preventDefault();
     
+    const tweetLength = $('#tweet-input').val().length;
+
+    // Validate tweet length before submission.
+    if (tweetLength === 0) {
+      alert("Tweet content must not be empty. Type something.")
+      return; 
+    }
+
+    if (tweetLength > 140) {
+      alert("Tweet content exceeds the 140 character limit!");
+      return;
+    }
+
     // Serialize form data.
     const serializedData = $(this).serialize();
 

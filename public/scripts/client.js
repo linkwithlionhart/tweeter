@@ -6,6 +6,12 @@
 
 $(document).ready(() => {
   
+  const escape = str => {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   /**
    * Creates a tweet element for provided tweet data.
    * @param {Array} tweets - Array of tweet objects for rendering. 
@@ -20,7 +26,7 @@ $(document).ready(() => {
         <h3>${tweet.user.name}</h3>
         <h4>${tweet.user.handle}</h4>
       </header>
-      <content>${tweet.content.text}</content>
+      <content>${escape(tweet.content.text)}</content>
       <footer class="footer-tweet">
         <div class="tweet-when">${timeago.format(tweet.created_at)}</div>
         <div class="icons">

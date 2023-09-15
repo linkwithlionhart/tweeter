@@ -6,6 +6,11 @@
 
 $(document).ready(() => {
   
+  /**
+   * Escapes potentially harmful characters in a string to prevent Cross-Site Scripting (XSS) attacks.
+   * @param {string} str - The input string potentially containing harmful characters.
+   * @returns {string} - A new string with harmful characters converted into their safe, encoded representation.
+   */ 
   const escape = str => {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));

@@ -6,6 +6,19 @@
 
 $(document).ready(() => {
   
+  // Add event listener and prevent default behavior.
+  $(".new-tweet form").submit(function(event) {
+    event.preventDefault();
+    
+    // Serialize form data.
+    const serializedData = $(this).serialize();
+
+    // Use jQuery to make AJAX post request.
+    $.post('/tweets/', serializedData, function(response) {
+      console.log(response);
+    });
+  }); 
+
   // TEMPORARY: hard coded test data:
   const data = [
     {
@@ -60,6 +73,7 @@ $(document).ready(() => {
     $tweet.html(tweetHTML);
     
     return $tweet;
+
   }
 
   /**

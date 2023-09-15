@@ -76,14 +76,19 @@ $(document).ready(() => {
     
     const tweetLength = $('#tweet-input').val().length;
 
+    // Hide existing error message.
+    $('#error-message').slideUp();
+
     // Validate tweet length before submission.
     if (tweetLength === 0) {
-      alert("Tweet content must not be empty. Type something.")
+      $('#error-text').text("Tweet content must not be empty. Type something, bruh.");
+      $('#error-message').slideDown();
       return; 
     }
 
     if (tweetLength > 140) {
-      alert("Tweet content exceeds the 140 character limit!");
+      $('#error-text').text("Tweet content exceeds the 140 character limit!");
+      $('#error-message').slideDown();
       return;
     }
 

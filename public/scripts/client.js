@@ -65,7 +65,6 @@ $(document).ready(() => {
   /**
    * Renders array of tweet data into tweet-list container.
    * @param {Array} tweets - Array of tweet objects for rendering. 
-   * @returns Renders HTML to page.
    */
   const renderTweets = tweets => {
     const $tweetsContainer = $('.tweet-list');

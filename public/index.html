@@ -33,36 +33,38 @@
       </div>
     </nav>
     <div id="nav-filler"></div>
-    <!-- Avatar header -->
-    <header class="header-avatar">
-      <div class="avatar">
-        <img src="./images/profile-hex.png">
-      </div>
-      <div class="username">
-        <h2><strong>William</strong></h2>
-      </div>
-    </header>
-    <!-- Main container to tweet -->
-    <main class="container">
-      <!-- New tweet -->
-      <section class="new-tweet">
-        <h2>New Tweet</h2>
-        <!-- Error message -->
-        <div id="error-message" class="hidden">
-          <p>Error: ⚠️ <span id="error-text"></span> ⚠️</p>
+    <div class="content">
+      <!-- Avatar header -->
+      <header class="header-avatar">
+        <div class="avatar">
+          <img src="./images/profile-hex.png">
         </div>
-        <!-- No error detected -->
-        <form method="POST" action="/tweets/">
-          <textarea name="text" id="tweet-input">What are you humming about?</textarea>
-          <div class="tweet-footer">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+        <div class="username">
+          <h2><strong>William</strong></h2>
+        </div>
+      </header>
+      <!-- Main container to tweet -->
+      <main class="container">
+        <!-- New tweet -->
+        <section class="new-tweet">
+          <h2>New Tweet</h2>
+          <!-- Error message -->
+          <div id="error-message" class="hidden">
+            <p>Error: ⚠️ <span id="error-text"></span> ⚠️</p>
           </div>
-        </form>
-      </section>
-      <!-- Tweet list -->
-      <section class="tweet-list">
-      </section>
-    </main>
+          <!-- No error detected -->
+          <form method="POST" action="/tweets/">
+            <textarea name="text" id="tweet-input">What are you humming about?</textarea>
+            <div class="tweet-footer">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <!-- Tweet list -->
+        <section class="tweet-list">
+        </section>
+      </main>
+    </div>
   </body>
 </html>

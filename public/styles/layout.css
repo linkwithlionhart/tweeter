@@ -16,7 +16,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #F3F1ED;
+  background-color: #F3F1EC;
   font-size: 24px;
   font-family: 'Source Sans 3', sans-serif;
 }
@@ -25,11 +25,14 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
+ main.container {
   width: 90%;
-  background-color: #F3F1ED;
-  margin: 0 auto;
- }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f4f1ec;
+  margin: auto;
+}
 
  /* Tablet View */ 
  @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -41,13 +44,26 @@ body {
 
  /* Desktop View */
  @media only screen and (min-width: 1024px) {
-  body {
-    line-height: 1.5; /* Better readability for desktop */
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+    position: relative;
   }
 
-  main {
-    width: 75%; /* A bit narrower to have more whitespace */
-    max-width: 1400px; /* Set a max-width for extremely wide screens */
-    padding: 0 5%; /* Side padding for better visual balance */
+  header.main-header {
+    margin-top: 1.5em;
+    margin-left: 2em;
+    margin-right: 1em;
+    width: 30%;
+  }
+
+  main.container {
+    margin-top: 1.3em;
+    margin-left: 1em;
+    margin-right: 2em;
+    width: 55%;
   }
  }

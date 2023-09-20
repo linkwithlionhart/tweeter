@@ -37,8 +37,12 @@ body {
  /* Tablet View */ 
  @media only screen and (min-width: 768px) and (max-width: 1024px) {
   main {
-    width: 95%; /* Increase width slightly */
-    padding: 0 3%; /* Give some padding on the sides for breathing room */
+    width: 95%;
+    padding: 0 3%;
+  }
+
+  header.header-avatar {
+    margin-bottom: 1.5em;
   }
  }
 
@@ -49,7 +53,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 1em;
+    padding-top: 120px;
     position: relative;
   }
 
@@ -61,7 +65,7 @@ body {
   }
 
   main.container {
-    margin-top: 1.3em;
+    margin-top: 1.5em;
     margin-left: 1em;
     margin-right: 2em;
     width: 55%;

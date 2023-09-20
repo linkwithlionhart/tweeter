@@ -34,6 +34,29 @@ body {
   margin: auto;
 }
 
+/* Button: scroll to top */
+#scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FB1403;
+  border: none;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  color: #FFFFFF;
+  font-size: larger;
+  font-weight: bolder;
+  cursor: pointer;
+  z-index: 1100;
+  transition: background-color 0.3s;
+}
+
+#scrollToTop:hover {
+  background-color: #304270;
+}
+
  /* Tablet View */ 
  @media only screen and (min-width: 768px) and (max-width: 1024px) {
   main {

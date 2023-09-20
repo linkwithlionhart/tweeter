@@ -7,7 +7,7 @@
 $(document).ready(() => {
   
   // Slide down new tweet section when arrows clicked.
-  $('nav i').click(function() {
+  $('nav div').click(function() {
     $('.new-tweet').slideDown();
   });
 
@@ -69,7 +69,10 @@ $(document).ready(() => {
 
   // Fetch tweets from the server and render to page.
   const loadTweets = () => {
-    $.ajax('/tweets', { method: 'GET'})
+    $.ajax('/tweets', { 
+      method: 'GET',
+      dataType: 'JSON',
+    })
     .then(function(tweets) {
       renderTweets(tweets);
     })
@@ -106,6 +109,9 @@ $(document).ready(() => {
       loadTweets(); 
     });
   }); 
+
+  // Fetch and display initial tweets immediately after the page is loaded.
+  loadTweets();
 
 });
 

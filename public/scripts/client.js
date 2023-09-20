@@ -6,9 +6,10 @@
 
 $(document).ready(() => {
   
-  // Slide down new tweet section when arrows clicked.
+  // Toggle the new-tweet section when the nav div is clicked.
   $('nav div').click(function() {
-    $('.new-tweet').slideDown();
+    $('.new-tweet').slideToggle();
+    $('#tweet-input').focus(); // Automatically focuses on the textarea after sliding down.
   });
 
   /**

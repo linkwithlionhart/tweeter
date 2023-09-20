@@ -29,7 +29,7 @@
       <span id="heading">TWEETER</span>
       <div>
         <span class="write-button"><strong>Write</strong> a new tweet</span>
-        <i class="fa-solid fa-angles-down" style="color: #F13E20;"></i>
+        <i class="fa-solid fa-angles-down fa-bounce custom-bounce" style="color: #F13E20;"></i>
       </div>
     </nav>
     <div id="nav-filler"></div>
@@ -47,12 +47,9 @@
       <main class="container">
         <!-- New tweet -->
         <section class="new-tweet">
-          <!-- Error message -->
-          <div id="error-message" class="hidden">
-            <p>Error: ⚠️ <span id="error-text"></span></p>
-          </div>
-          <!-- No error detected -->
           <form method="POST" action="/tweets/">
+          <!-- Error message -->
+          <div id="error-message" class="hidden"><p>⚠️ Error:<span id="error-text"> </span></p></div>
             <textarea name="text" id="tweet-input">What are you humming about?</textarea>
             <div class="tweet-footer">
               <button type="submit">Tweet</button>

@@ -23,6 +23,7 @@ article.tweet header {
 article.tweet img {
   max-height: 50%;
   max-width: 50%;
+  margin-right: 0.5em;
 }
 
 article.tweet h3 {
@@ -49,7 +50,7 @@ article.tweet content {
 footer {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  margin-top: 25px;
   width: 100%;
   font-size: 0.9em;
 }

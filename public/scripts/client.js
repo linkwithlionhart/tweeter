@@ -6,6 +6,11 @@
 
 $(document).ready(() => {
   
+  // Slide down new tweet section when arrows clicked.
+  $('nav i').click(function() {
+    $('.new-tweet').slideDown();
+  });
+
   /**
    * Escapes potentially harmful characters in a string to prevent Cross-Site Scripting (XSS) attacks.
    * @param {string} str - The input string potentially containing harmful characters.

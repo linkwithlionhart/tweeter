@@ -30,3 +30,13 @@ body {
   background-color: #F3F1ED;
   margin: 0 auto;
  }
+
+ /* Tablet View */ 
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+ }
+
+ /* Desktop View */
+ @media only screen and (min-width: 1024px) {
+
+ }

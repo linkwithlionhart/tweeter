@@ -32,32 +32,37 @@ nav div {
 /* Tablet View */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   nav {
-    height: 90px; /* Slightly reduce the height for tablet */
-    padding: 0 1.5em; /* Maintain padding for tablet */
+    height: 90px;
+    padding: 0 1.5em;
     background-color: transparent;
   }
   
   #heading {
-    font-size: x-large; /* Slightly reduce font size */
+    font-size: x-large;
+    color: #4056A1;
+  }
+
+  .write-button {
+    color: #4056A1;
   }
   
   nav div {
-    flex-direction: row; /* Align the icons and text horizontally */
+    flex-direction: row;
   }
 }
 
 /* Desktop View */
 @media only screen and (min-width: 1024px) {
   nav {
-    height: 120px; /* Restore the original height for desktop */
-    padding: 0 2em; /* Increase padding for more spacing */
+    height: 120px;
+    padding: 0 2em;
   }
   
   #heading {
-    font-size: xx-large; /* Restore the original font size */
+    font-size: xx-large;
   }
   
   nav div {
-    flex-direction: column; /* Align the icons and text vertically again */
+    flex-direction: column;
   }
 }

@@ -33,10 +33,21 @@ body {
 
  /* Tablet View */ 
  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
+  main {
+    width: 95%; /* Increase width slightly */
+    padding: 0 3%; /* Give some padding on the sides for breathing room */
+  }
  }
 
  /* Desktop View */
  @media only screen and (min-width: 1024px) {
+  body {
+    line-height: 1.5; /* Better readability for desktop */
+  }
 
+  main {
+    width: 75%; /* A bit narrower to have more whitespace */
+    max-width: 1400px; /* Set a max-width for extremely wide screens */
+    padding: 0 5%; /* Side padding for better visual balance */
+  }
  }

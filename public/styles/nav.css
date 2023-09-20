@@ -29,3 +29,43 @@ nav div {
   justify-content: center;
   cursor: pointer;
 }
+
+/* Tablet View */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    height: 90px; /* Slightly reduce the height for tablet */
+    padding: 0 1.5em; /* Maintain padding for tablet */
+  }
+  
+  #nav-filler {
+    height: 90px; /* Align filler height with the nav bar */
+  }
+  
+  #heading {
+    font-size: x-large; /* Slightly reduce font size */
+  }
+  
+  nav div {
+    flex-direction: row; /* Align the icons and text horizontally */
+  }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 1024px) {
+  nav {
+    height: 120px; /* Restore the original height for desktop */
+    padding: 0 2em; /* Increase padding for more spacing */
+  }
+  
+  #nav-filler {
+    height: 120px; /* Align filler height with the nav bar */
+  }
+  
+  #heading {
+    font-size: xx-large; /* Restore the original font size */
+  }
+  
+  nav div {
+    flex-direction: column; /* Align the icons and text vertically again */
+  }
+}

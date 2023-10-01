@@ -108,6 +108,11 @@ $(document).ready(() => {
     $.post('/tweets/', serializedData, function(response) {
       console.log(response);
       loadTweets(); 
+
+    // Reset the text area and character counter after a successful tweet post.
+    $('#tweet-input').val('');
+    $('.counter').val(140);   
+    $('.counter').removeClass('turn-red-counter');
     });
   }); 
 

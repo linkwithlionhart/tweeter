@@ -74,10 +74,15 @@ $(document).ready(() => {
       method: 'GET',
       dataType: 'JSON',
     })
-    .then(function(tweets) {
+    .done(function(tweets) {
       renderTweets(tweets);
     })
-  }
+    .fail(function(error) {
+      console.error("Error fetching tweets:", error.statusText);
+      $('#error-text').text("There was an error fetching tweets. Please refresh the page or try again later.");
+      $('#error-message').slideDown();
+    });
+  };
 
   // Handle the form submission.
   $(".new-tweet form").submit(function(event) {
@@ -89,7 +94,7 @@ $(document).ready(() => {
     $('#error-message').slideUp();
 
     // Validate tweet length before submission.
-    if (tweetLength === 0) {
+    if (!tweetLength) {
       $('#error-text').text("Tweet content must not be empty. Type something, bruh.");
       $('#error-message').slideDown();
       return; 
@@ -105,9 +110,16 @@ $(document).ready(() => {
     const serializedData = $(this).serialize();
 
     // Use jQuery to make AJAX post request.
-    $.post('/tweets/', serializedData, function(response) {
+    $.post('/tweets/', serializedData)
+    .done(function(response) {
       console.log(response);
-      loadTweets(); 
+      loadTweets();
+    })
+    .fail(function(error) {
+      console.error("Error posting tweet:", error.statusText);
+      $('#error-text').text("There was an error posting your tweet. Please try again later.");
+      $('#error-message').slideDown();
+    });
 
     // Reset the text area and character counter after a successful tweet post.
     $('#tweet-input').val('');
